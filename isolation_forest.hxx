@@ -132,8 +132,7 @@ template<class T>
 double IsolationForest<T>::IsolationTree::path_length(const MatrixRow<T> &data)
 {
     if (pLeft == nullptr || pRight == nullptr) {
-        if (m_size < 2)
-        {
+        if (m_size < 2) {
             return static_cast<double>(m_current_height);
         }
         return IsolationTree::fact_c(m_size) + m_current_height;
